@@ -18,10 +18,11 @@ export default function App() {
         setIsPortrait(false)
       }
     })
-
+    
     return () => {
       ScreenOrientation.removeOrientationChangeListener(subscription)
     }
+
   }, [])
 
   const lockToPortrait = async () => {
