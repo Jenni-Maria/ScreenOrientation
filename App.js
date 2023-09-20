@@ -10,7 +10,7 @@ export default function App() {
 
   useEffect(() => {
     const subscription = ScreenOrientation.addOrientationChangeListener((value) => {
-      if (value.orientationInfo === ScreenOrientation.Orientation.PORTRAIT_UP) {
+      if (value.orientationInfo.orientation === ScreenOrientation.Orientation.PORTRAIT_UP) {
         setScreenOrientation('PORTRAIT')
         setIsPortrait(true)
       } else if (value.orientationInfo.orientation === ScreenOrientation.Orientation.LANDSCAPE_LEFT || value.orientationInfo.orientation === ScreenOrientation.Orientation.LANDSCAPE_RIGHT) {
